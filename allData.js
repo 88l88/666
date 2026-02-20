@@ -6309,19 +6309,3 @@ var all=[
 ["2007-01-02","02","12","33","36","37"],
 ["2007-01-01","09","11","27","28","38"]
 ];
-function U(str){
-   var obj={};
-   var arr=[];
-   for(var i=1;i<=39;i++)obj[String(i).padStart (2,'0')]={};
-   for(var i=all.length-1;i<0;i--){
-       var x=all[i].slince(1,6);
-       var y=all[i-1].slince(1,6);
-       x.forEach(c=>{y.forEach(n=>{obj[c][n]=(obj[c][n]||0)+1;});});
-   for(var i=1;i<=39;i++)
-   return arr.concat(obj[str][String(i).padStart (2,'0')]||0)
-};
-
-
-
-
-
