@@ -6310,4 +6310,28 @@ var all=[
 ["2007-01-02","02","12","33","36","37"],
 ["2007-01-01","09","11","27","28","38"]
 ];
+// 這就是自動引擎，網頁一開就自己算好
+var X = (function() {
+    var tempX = [null];
+    for (var i = 1; i <= 39; i++) {
+        var row = [i.toString().padStart(2, '0')];
+        for (var m = 1; m <= 39; m++) { row.push(0); }
+        tempX.push(row);
+    }
+    if (typeof all !== 'undefined') {
+        for (var j = all.length - 1; j > 0; j--) {
+            if (!all[j] || !all[j-1]) continue;
+            var lastDraw = all[j].slice(1, 6);   
+            var thisDraw = all[j-1].slice(1, 6); 
+            lastDraw.forEach(c => {
+                var r = parseInt(c);
+                thisDraw.forEach(n => {
+                    var cI = parseInt(n);
+                    if (tempX[r]) tempX[r][cI]++;
+                });
+            });
+        }
+    }
+    return tempX; // 算完直接丟給變數 X，你的查詢功能就能用了
+})();
 
