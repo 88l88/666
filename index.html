@@ -55,11 +55,11 @@ var V= (function() {
         for (var m = 1; m <= 39; m++) { row.push(0); }
         tempX.push(row);
     }
-    if (typeof all !== 'undefined') {
-        for (var j = all.length - 1; j > 0; j--) {
-            if (!all[j] || !all[j-1]) continue;
-            var x = all[j].slice(1);   
-            var y = all[j-1].slice(1); 
+    if (typeof U !== 'undefined') {
+        for (var j = U.length - 1; j > 0; j--) {
+            if (!U[j] || !U[j-1]) continue;
+            var x = U[j].slice(1);   
+            var y = U[j-1].slice(1); 
             x.forEach(c => {
                 var r = parseInt(c);
                 y.forEach(n => {
