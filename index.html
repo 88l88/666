@@ -70,7 +70,8 @@ var V= (function() {
         }
          return tempX; // 算完直接丟給變數 X，你的查詢功能就能用了
     }
-    
+    var today = new Date().toISOString().split('T')[0];  
+    tempX[0]=today;
 })();
 
 
