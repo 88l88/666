@@ -6327,19 +6327,19 @@ var H=[
 ["2007-01-01","09","11","27","28","38"]
 ];
 
-var V= (function() {
-    var today = new Date().toISOString().split('T')[0];  
-    var tempX = [today];
+var Z=(function(){
+    var t = new Date().toISOString().split('T')[0]||null;  
+    var tempX = [t];
     for (var i = 1; i <= 39; i++) {
         var row = [String(i).padStart(2,'0')];
         for (var m = 1; m <= 39; m++) { row.push(0); }
         tempX.push(row);
     }
-    if (typeof U !== 'undefined') {
-        for (var j = U.length - 1; j > 0; j--) {
-            if (!U[j] || !U[j-1]) continue;
-            var x = U[j].slice(1);   
-            var y = U[j-1].slice(1); 
+    if (typeof all !== 'undefined') {
+        for (var j = all.length - 1; j > 0; j--) {
+            if (!all[j] || !all[j-1]) continue;
+            var x = all[j].slice(1);   
+            var y = all[j-1].slice(1); 
             x.forEach(c => {
                 var r = parseInt(c);
                 y.forEach(n => {
