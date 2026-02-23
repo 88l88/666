@@ -6326,29 +6326,3 @@ var H=[
 ["2007-01-02","02","12","33","36","37"],
 ["2007-01-01","09","11","27","28","38"]
 ];
-var all=A.concat(B);
-var Z=(function(){
-    var t = new Date().toISOString().split('T')[0]||null;  
-    var tempX = [t];
-    for (var i = 1; i <= 39; i++) {
-        var row = [String(i).padStart(2,'0')];
-        for (var m = 1; m <= 39; m++) { row.push(0); }
-        tempX.push(row);
-    }
-    if (typeof all !== 'undefined') {
-        for (var j = all.length - 1; j > 0; j--) {
-            if (!all[j] || !all[j-1]) continue;
-            var x = all[j].slice(1);   
-            var y = all[j-1].slice(1); 
-            x.forEach(c => {
-                var r = parseInt(c);
-                y.forEach(n => {
-                    var cI = parseInt(n);
-                    if (tempX[r]) tempX[r][cI]++;
-                });
-            });
-           
-        }
-         return tempX; // 算完直接丟給變數 X，你的查詢功能就能用
-    }
-})();
