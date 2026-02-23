@@ -6326,7 +6326,7 @@ var H=[
 ["2007-01-02","02","12","33","36","37"],
 ["2007-01-01","09","11","27","28","38"]
 ];
-
+var all=A.concat(B);
 var Z=(function(){
     var t = new Date().toISOString().split('T')[0]||null;  
     var tempX = [t];
