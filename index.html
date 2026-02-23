@@ -48,7 +48,8 @@ var U=[
 ["2026-01-01","15","16","18","29","36"]
 ];
 var V= (function() {
-    var tempX = [null];
+    var var today = new Date().toISOString().split('T')[0];  
+    var tempX = [today];
     for (var i = 1; i <= 39; i++) {
         var row = [String(i).padStart(2,'0')];
         for (var m = 1; m <= 39; m++) { row.push(0); }
@@ -68,10 +69,8 @@ var V= (function() {
             });
            
         }
-         return tempX; // 算完直接丟給變數 X，你的查詢功能就能用了
+         return tempX; // 算完直接丟給變數 X，你的查詢功能就能用
     }
-    var today = new Date().toISOString().split('T')[0];  
-    tempX[0]=today;
 })();
 
 
