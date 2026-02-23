@@ -1,4 +1,4 @@
-var V=[
+var U=[
 ["2026-02-22","08","13","16","24","25"],  
 ["2026-02-21","01","08","19","20","25"],   
 ["2026-02-20","04","11","22","23","27"],  
@@ -45,4 +45,32 @@ var V=[
 ["2026-01-05","10","16","18","34","39"],
 ["2026-01-03","22","23","31","32","38"],
 ["2026-01-02","17","18","25","36","39"],
-["2026-01-01","15","16","18","29","36"],
+["2026-01-01","15","16","18","29","36"]
+];
+var V= (function() {
+    var tempX = [null];
+    for (var i = 1; i <= 39; i++) {
+        var row = [String(i).padStart(2,'0')];
+        for (var m = 1; m <= 39; m++) { row.push(0); }
+        tempX.push(row);
+    }
+    if (typeof all !== 'undefined') {
+        for (var j = all.length - 1; j > 0; j--) {
+            if (!all[j] || !all[j-1]) continue;
+            var x = all[j].slice(1);   
+            var y = all[j-1].slice(1); 
+            x.forEach(c => {
+                var r = parseInt(c);
+                y.forEach(n => {
+                    var cI = parseInt(n);
+                    if (tempX[r]) tempX[r][cI]++;
+                });
+            });
+           
+        }
+         return tempX; // 算完直接丟給變數 X，你的查詢功能就能用了
+    }
+    
+})();
+
+
