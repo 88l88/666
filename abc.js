@@ -5807,3 +5807,24 @@ var I=[
 ["2007-01-02","02","12","33","36","37"],
 ["2007-01-01","09","11","27","28","38"]
 ];
+function Z(date=2007) {
+        var arr=[];
+        for(var i=1;i<=39;i++){
+               var row=[String(i).padStart(2, '0')];
+               for(var j=1; j<=39; j++) row.push(0);
+               arr.push(row);
+         }
+        for (var u=all.length-1;u>0;u--){
+                if(all[u][0]<date+'-01-01')continue;
+                var x=all[u].slice(1);
+                var y=all[u-1].slice(1);
+                x.forEach(c => {
+                         var r=parseInt(c)-1; 
+                         y.forEach(n => {
+                                  var h=parseInt(n);
+                                  arr[r][h]++;
+                         });
+                 });
+           }  
+         return arr; 
+}
