@@ -6336,8 +6336,8 @@ function Z(date='2007') {
         }
          return tempX;
     }
-    
-})();
+}
+
 
 
 
