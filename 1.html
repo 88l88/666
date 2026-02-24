@@ -5,7 +5,7 @@
 
 <script>
 function open_win() {
-	window.open("https://88l88.github.io/666/2.html");
+	window.open("2.html");
 }
 	const windowFeatures = "left=100,top=100,width=320,height=320";
    const handle = window.open( "https://88l88.github.io/666/3.html", "mozillaWindow",windowFeatures);
@@ -19,9 +19,12 @@ function open_win() {
 </head>
 <body>
 	
-<form>
+
+<button onclick="window.open('3.html', '_self')">當前頁開啟</button>
 <input type="button" value="打开窗口" onclick="open_win()">
-</form>
+
+<button onclick="location.href='https://88l88.github.io/666/2.html">點擊跳轉</button>
+
 	
 </body>
 </html>
