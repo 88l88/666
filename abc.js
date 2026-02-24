@@ -5839,10 +5839,10 @@ var U=(function(){
                for(var j=1; j<=39; j++) row.push(0);
                arr.push(row);
          }
-        for (var u=all.length-1;u>0;u--){
-                if(all[u][0]<date+'-01-01')continue;
-                var x=all[u].slice(1);
-                var y=all[u-1].slice(1);
+        for (var u=abc.length-1;u>0;u--){
+             if(abc[u][0]<date+'-01-01')continue;
+                var x=abc[u].slice(1);
+                var y=abc[u-1].slice(1);
                 x.forEach(c => {
                          var r=parseInt(c)-1; 
                          y.forEach(n => {
@@ -5853,6 +5853,3 @@ var U=(function(){
            }  
          return arr; 
 })();
-function Z(date=2007){
-        if(all)
-}
