@@ -2,26 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>2.html</title>
 
 <script>
 function open_win() {
 	window.open("https://88l88.github.io/666/3.html");
 }
-	const windowFeatures = "left=100,top=100,width=320,height=320";
-   const handle = window.open( "https://88l88.github.io/666/1.html", "mozillaWindow",windowFeatures);
-    if (handle) {
-  // 不允许打开此窗口
-  // 可能被内置弹窗阻止程序阻止了
-  // …
-}
-
+	
 </script>
 </head>
 <body>
 	
-<form>
+
+<button onclick="window.open('3.html', '_self')">當前頁開啟</button>
 <input type="button" value="打开窗口" onclick="open_win()">
-</form>
+
+<button onclick="location.href='1.html">點擊跳轉</button>
 	
 </body>
 </html>
