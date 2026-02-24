@@ -6313,7 +6313,7 @@ var all=[
 ["2007-01-02","02","12","33","36","37"],
 ["2007-01-01","09","11","27","28","38"]
 ];
-function Z(date='2007') {
+function Z(d=2007) {
     var tempX = [null];
     for (var i = 1; i <= 39; i++) {
         var row = [String(i).padStart(2,'0')];
@@ -6322,21 +6322,23 @@ function Z(date='2007') {
     }
     if (typeof all !== 'undefined') {
         for (var j = all.length - 1; j > 0; j--) {
-            if (all[j][0]<date+'-01-01') continue;
+            if (all[j][0]<d+'-01-01') continue;
             var x = all[j].slice(1);   
             var y = all[j-1].slice(1); 
             x.forEach(c => {
                 var r = parseInt(c);
                 y.forEach(n => {
                     var cI = parseInt(n);
-                    if (tempX[r]) tempX[r][cI]++;
+                    tempX[r][cI]++;
                 });
             });
            
-        }
-         return tempX;
-    }
+         }
+         
+     }
+     return tempX;
 }
+
 
 
 
