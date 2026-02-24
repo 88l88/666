@@ -5831,7 +5831,7 @@ var T=[
 ["2007-01-02","02","12","33","36","37"],
 ["2007-01-01","09","11","27","28","38"]
 ];
-var abc=[].concat(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T);
+
 var U=(function(){
         var arr=[];
         for(var i=1;i<=39;i++){
@@ -5840,9 +5840,9 @@ var U=(function(){
                arr.push(row);
          }
         for (var u=abc.length-1;u>0;u--){
-             if(abc[u][0]<date+'-01-01')continue;
-                var x=abc[u].slice(1);
-                var y=abc[u-1].slice(1);
+             if(all[u][0]<date+'-01-01')continue;
+                var x=all[u].slice(1);
+                var y=all[u-1].slice(1);
                 x.forEach(c => {
                          var r=parseInt(c)-1; 
                          y.forEach(n => {
